@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ content.title }} - Reviews</title>
+    <link rel="stylesheet" href="{% static 'home/home.css' %}">
+</head>
+<body>
+{% include 'navbar.html' %}
+
+<div class="container" style="max-width: 900px; margin: auto; padding: 2rem; color: white;">
+
+    <!-- Poster with fade and text overlay -->
+    <div class="poster-section">
+        <div class="poster-fade">
+<!--            <p>Image path: {% static 'home/images/'|add:content.category|add:'/'|add:content.title|urlencode|add:'.jpg' %}</p>-->
+
+<!--            <img src="{% static 'home/images/movie/'|add:content.title|add:'.jpg' %}" alt="{{ content.title }}">-->
+<!--            <img src="{% static 'home/images/'|add:content.category|add:'/'|add:content.title|add:'.jpg' %}" alt="{{ content.title }}">-->
+            <img src="{% static 'home/images/'|add:content.category|add:'/'|add:content.title|urlencode|add:'.jpg' %}" alt="{{ content.title }}">
+
+            <div class="poster-overlay">
+                <h1>{{ content.title }}</h1>
+                <h2>{{ content.release_date|date:"M d, Y" }}</h2>
+                <h2>{{ content.get_category_display }}</h2>
+                <p>{{ content.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ratings -->
+    <h2>Ratings</h2>
+    <div class="average-rating">
+        ★ {{ avg_rating|default:"0.0"|floatformat:1 }}/5
+    </div>
+
+    <h2>Reviews</h2>
+    <div class="reviews-scroll-box">
+      {% if reviews %}
+          {% for review in reviews %}
+              <div class="review-card">
+                  <p><strong>{{ review.user.username }}</strong> — Rating: {{ review.rating }}/5</p>
+                  <p>{{ review.review_text }}</p>
+                  <small>Posted on {{ review.created_at|date:"M d, Y H:i" }}</small>
+              </div>
+          {% endfor %}
+      {% else %}
+          <p>No reviews yet. Be the first to review!</p>
+      {% endif %}
+    </div>
+
+    {% if user.is_authenticated %}
+    <hr>
+    <h3>Add a Review</h3>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="id_rating">Rating:</label>
+        <div class="star-rating">
+            {% for i in "54321" %}
+                <input type="radio" id="star{{ i }}" name="rating" value="{{ i }}" required>
+                <label for="star{{ i }}">&#9733;</label>
+            {% endfor %}
+        </div>
+        <br><br>
+        <label for="id_review_text">Your Review:</label><br>
+        <textarea id="id_review_text" name="review_text" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit" id="subrevbtn"><strong>Submit Review</strong></button>
+    </form>
+    {% else %}
+    <p><a href="{% url 'login' %}"><strong>Login</strong></a> <strong>to add a review.</strong></p>
+    {% endif %}
+
+</div>
+</body>
+</html>

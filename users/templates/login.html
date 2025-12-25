@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'register/login_page.css' %}">
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- LOGO OUTSIDE CONTAINER -->
+    <div class="logo">
+        <img src="{% static 'register/images/final_ratemyshow_nobg.png' %}" alt="Rate My Show Logo">
+    </div>
+
+    <!-- LOGIN CONTAINER -->
+    <div class="login-container">
+        <form method="post" id="LoginForm">
+            {% csrf_token %}
+            <h1>Login</h1>
+
+            <div class="inp">
+                <input type="text" placeholder="Username" name="username" required>
+            </div>
+
+            <div class="inp">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+
+            <button type="submit" class="login-button">Login</button>
+
+            <div class="signup">
+                Don't have an account? <a href="../signup">Signup</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- ALERT OUTSIDE CONTAINER -->
+    <div class="alert-wrapper">
+        {% include "base/alert.html" %}
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'register/signup.css' %}">
+    <link rel="stylesheet" href="{% static 'alert.css' %}">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'register/images/final_ratemyshow_nobg.png' %}" alt="Rate My Show Logo">
+        </div>
+
+        <form method="post" id="RegisterForm">
+            {% csrf_token %}
+            <h1>Register</h1>
+
+            <div class="inp">
+                <input type="text" name="fullname" placeholder="Full Name">
+            </div>
+            <div class="inp">
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="inp">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div class="inp">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div class="inp">
+                <input type="password" name="confirm_password" placeholder="Confirm Password">
+            </div>
+            <div class="inp">
+                <input type="text" name="phoneno" placeholder="Phone Number">
+            </div>
+
+            <div class="gender">
+                <input type="radio" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <div>
+                <button class="signup-button" type="submit">Register</button>
+            </div>
+        </form>
+
+        <div class="alert-wrapper">
+            {% include "base/alert.html" %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

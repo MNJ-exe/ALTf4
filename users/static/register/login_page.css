@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: #999 url('images/Register_pagedim_.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Reduced gap between logo and box */
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 25px 30px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.inp input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+.inp input:focus {
+  border-color: lightgrey;
+  outline: none;
+  box-shadow: 0 0 4px rgba(79, 79, 79, 0.3);
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4f4f4f;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.01);
+}
+
+.signup {
+  font-size: 13px;
+  margin-top: -5px;
+}
+
+/* ALERT BOX OUTSIDE LOGIN CONTAINER */
+.alert-wrapper {
+  margin-top: -5px;
+  width: 320px;
+  text-align: center;
+}
+
+.custom-alert {
+  background-color: #2ecc71;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 13px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-alert.error {
+  background-color: #e74c3c;
+}
+
+.custom-alert.success {
+  background-color: #2ecc71;
+}
+
+.custom-alert .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
