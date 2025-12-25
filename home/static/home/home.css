@@ -1,0 +1,419 @@
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-attachment: fixed;
+    color: white;
+    font-family: monospace;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;         /* Center all posters as a group */
+  gap: 3rem;                       /* Horizontal space between posters */
+  margin: 32px auto;               /* Top/bottom spacing and center overall row */
+  max-width: 95vw;               /* Optional: limit row width */
+  padding: 0 2rem;
+  box-sizing: border-box;        /* Optional: spaces at left/right on small screens */
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+img {
+  display: block;
+  width: 100%;
+  max-width: 300px;/* or any fixed/relative width you like */
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #fff;       /* Adjust to your theme */
+}
+
+/* The hero image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Register_pagedim_.jpg");
+  border-radius: 10px;
+  height: 50vh;         /* Use vh for responsive height */
+  width: 90%;           /* Keeps it from full width */
+  max-width: 1500px;    /* Optional: limit the max width */
+  margin: 32px auto;    /* This centers it and adds vertical gaps */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.subhead{
+  position:relative;
+  left: 5%;
+}
+
+/*top navigation banner*/
+/*.top-banner {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  position: relative;*/
+/*  height: 50px;*/
+/*  background: #333;*/
+/*  border-radius: 10px;*/
+/*}*/
+.top-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 60px;
+  background: #333;
+  border-radius: 10px;
+  padding: 0 24px;
+}
+.top-banner ul {
+  display: flex;
+  align-items:center;
+  gap: 32px; /* space between each nav item */
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.top-banner ul li a {
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: #655a5a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.top-banner ul li.active a,
+.top-banner ul li a:focus {
+  background:#c4242b ;   /* blue for active/highlighted */
+  color:white;
+}
+
+.top-banner ul li a:hover {
+  transform: scale(1.07);
+}
+
+/*.top-banner button{*/
+/*  position: absolute;*/
+/*  right: 24px;*/
+/*  top: 50%;*/
+/*  transform: translateY(-50%);*/
+/*  background-color: black;*/
+/*  border-radius: 10px;*/
+/*  width: 90px;*/
+/*  height: 38px;*/
+/*  color: white;*/
+/*  border: none;*/
+/*  font-size: 1rem;*/
+/*  cursor: pointer;*/
+/*  transition: background 0.25s, color 0.2s;*/
+/*}*/
+
+/*.top-banner button:hover {*/
+/*  background-color: crimson;*/
+/*  color: #fff;*/
+/*}*/
+
+.logout-button {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+  border-radius: 10px;
+  width: 90px;
+  height: 38px;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  text-decoration: none;
+  transition: background 0.25s, color 0.2s;];
+  font-family: monospace;
+}
+
+.logout-button:hover {
+  background-color: #c4242b;
+  color: #fff;
+}
+.logo {
+  margin-right: 9px;
+  background:none;
+}
+#log_in{
+  font-family: monospace;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: black;
+  border-radius: 10px;
+  width: 90px;
+  height: 38px;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  text-decoration: none;
+  transition: background 0.25s, color 0.2s;
+}
+/*.logo {*/
+/*  position: absolute;*/
+/*  left: 24px;*/
+/*  top: 50%;*/
+/*  width: 90px;*/
+/*  height: 38px;*/
+/*  border:none;*/
+/*}*/
+.logo img.navbar-logo {
+  height: auto;
+  width: 125px;
+  display: block;
+  border-radius: 6px;
+  background:none;
+}
+
+#log_in:hover {
+  background-color: #c4242b;
+  color: #fff;
+}
+
+
+
+
+
+/*reviews css*/
+.container{
+    p{
+        font-size: large;
+    }
+}
+/* Poster fade with overlay */
+.poster-section {
+    width: 100%;
+    max-width: 1500px;         /* Same as hero image */
+    margin: 32px auto 1rem auto;
+    position: relative;
+    color: white;
+}
+
+.poster-fade {
+    position: relative;
+    width: 100%;
+    height: 60vh;              /* Same as hero image */
+    min-height: 450px;
+    max-height: 520px;
+    display: flex;
+    align-items: stretch;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.6);
+}
+.poster-fade img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    border-radius: 10px;
+}
+
+.poster-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 55%;
+    background: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.88) 65%,
+      rgba(20, 20, 20, 0.0) 100%
+    );
+    border-radius: 10px 0 0 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.poster-overlay h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #c4242b;
+}
+
+.poster-overlay h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+
+.poster-overlay p {
+    margin: 0.3em 0;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+/* Average rating style */
+.average-rating {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #c4242b;
+    text-shadow: 1px 1px 4px #000;
+    font-weight: bold;
+}
+
+.reviews-scroll-box {
+    max-height: 25rem;    /* Adjust so 3 review cards fit visibly */
+    overflow-y: auto;
+    margin-bottom: 2rem;
+    padding-right: 8px;   /* Spacer for scrollbar */
+    background-color: black;
+    border-radius: 10px;
+    scrollbar-color: #c4242b #eff0f4;     /* For Firefox */
+    scrollbar-width: thin;
+}
+/* Review card styling */
+/*.review-card {*/
+/*    background: #222;*/
+/*    padding: 1rem;*/
+/*    margin-bottom: 1rem;*/
+/*    border-radius: 8px;*/
+/*    color: white;*/
+/*    box-shadow: 0 2px 6px rgba(0,0,0,0.5);*/
+/*}*/
+/*.review-card p {*/
+/*    margin: 0.3rem 0;*/
+/*}*/
+.review-card {
+    /*background: #222;*/
+    padding: 1rem;
+    margin-bottom: 0.7rem;          /* More space between cards */
+    border-radius: 10px;
+    color: white;
+    /*box-shadow: 0 2px 6px rgba(0,0,0,0.5);*/
+    border-bottom: 0.5px;  /* Subtle dividing line below each review */
+    font-size: 1rem;             /* Increase font size */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .poster-fade {
+        height: 180px;
+    }
+    .poster-overlay {
+        width: 80%;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    .poster-overlay h1 {
+        font-size: 1.6rem;
+    }
+    .average-rating {
+        font-size: 1.3rem;
+    }
+}
+.poster-fade img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.9);
+    display: block;
+}
+#id_rating{
+    background-color: black;
+    color: white;
+}
+#id_review_text{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+#subrevbtn{
+    background-color: #655a5a;
+    color: white;
+    border-radius: 10px;
+    width: 120px;
+    height: 38px;
+}
+#subrevbtn:hover{
+    background-color: #c4242b;
+    color: #fff;
+}
+.star-rating {
+  direction: rtl;
+  display: inline-flex;
+  font-size: 2rem;
+  unicode-bidi: bidi-override;
+}
+.star-rating input[type='radio'] {
+  display: none;
+}
+.star-rating label {
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.star-rating input[type='radio']:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #c4242b;
+}
+
+
+

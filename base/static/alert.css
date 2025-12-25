@@ -1,0 +1,42 @@
+.alert-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+  z-index: 10;
+}
+
+.custom-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #2ecc71;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  width: fit-content;
+  max-width: 90%;
+  font-family: monospace;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.custom-alert.success {
+  background-color: #2ecc71;
+}
+
+.custom-alert.error {
+  background-color: #e74c3c;
+}
+
+.custom-alert .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}

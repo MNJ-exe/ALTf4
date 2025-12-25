@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+</head>
+<body>
+{% include 'navbar.html' %}
+<h1 class="subhead">Documentaries</h1>
+<div class="row1">
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 33 %}">
+        <img src="{% static 'home/images/documentary/13th.jpg' %}" alt="All of Us Are Dead">
+        </a>
+        <figcaption>13th</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 34 %}">
+        <img src="{% static 'home/images/documentary/africa.jpg' %}" alt="Black Warrant">
+        </a>
+        <figcaption>Africa</figcaption>
+    </figure>
+        </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 35 %}">
+        <img src="{% static 'home/images/documentary/blackfish.jpg' %}" alt="Dark">
+            </a>
+        <figcaption>Blackfish</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+         <figure>
+             <a href="{% url 'content_detail' 36 %}">
+        <img src="{% static 'home/images/documentary/cosmos.jpg' %}" alt="One Piece">
+             </a>
+        <figcaption>Cosmos</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 37 %}">
+        <img src="{% static 'home/images/documentary/free solo.jpg' %}" alt="Sacred Games">
+            </a>
+        <figcaption>Free Solo</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 38 %}">
+        <img src="{% static 'home/images/documentary/frozen planet.jpg' %}" alt="Squid Game">
+        </a>
+        <figcaption>Frozen Planet</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 39 %}">
+        <img src="{% static 'home/images/documentary/honeyland.jpg' %}" alt="Stranger Things">
+        </a>
+        <figcaption>Honeyland</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 40 %}">
+        <img src="{% static 'home/images/documentary/human planet.jpg' %}" alt="Vikings">
+            </a>
+        <figcaption>Human Planet</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 41 %}">
+        <img src="{% static 'home/images/documentary/inside job.jpg' %}" alt="peaky blienders">
+        </a>
+        <figcaption>Inside Job</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 42 %}">
+        <img src="{% static 'home/images/documentary/no other land.jpg' %}" alt="Black Warrant">
+        </a>
+        <figcaption>No Other Land</figcaption>
+    </figure>
+        </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 43 %}">
+        <img src="{% static 'home/images/documentary/planet earth 2.jpg' %}" alt="Dark">
+            </a>
+        <figcaption>Planet Earth 2</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+         <figure>
+             <a href="{% url 'content_detail' 44 %}">
+        <img src="{% static 'home/images/documentary/prehistoric planet.jpg' %}" alt="One Piece">
+             </a>
+        <figcaption>Prehistoric Planet</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 45 %}">
+        <img src="{% static 'home/images/documentary/the cove.jpg' %}" alt="Sacred Games">
+            </a>
+        <figcaption>The Cove</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 46 %}">
+        <img src="{% static 'home/images/documentary/the rescue.jpg' %}" alt="Squid Game">
+        </a>
+        <figcaption>The Rescue</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 47 %}">
+        <img src="{% static 'home/images/documentary/the salt of the earth.jpg' %}" alt="Stranger Things">
+        </a>
+        <figcaption>The Salt Of The Earth</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 48 %}">
+        <img src="{% static 'home/images/documentary/our planet.jpg' %}" alt="Vikings">
+            </a>
+        <figcaption>Our Planet</figcaption>
+    </figure>
+    </div>
+</div>
+</body>
+</html>

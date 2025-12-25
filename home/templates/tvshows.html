@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+</head>
+<body>
+{% include 'navbar.html' %}
+<h1 class="subhead">TvShows</h1>
+<div class="row1">
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 17 %}">
+        <img src="{% static 'home/images/tvshow/all of us are dead.jpg' %}" alt="All of Us Are Dead">
+        </a>
+        <figcaption>All of Us Are Dead</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 18 %}">
+        <img src="{% static 'home/images/tvshow/Black Warrant.jpg' %}" alt="Black Warrant">
+        </a>
+        <figcaption>Black Warrant</figcaption>
+    </figure>
+        </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 19 %}">
+        <img src="{% static 'home/images/tvshow/Dark.jpg' %}" alt="Dark">
+            </a>
+        <figcaption>Dark</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+         <figure>
+             <a href="{% url 'content_detail' 20 %}">
+        <img src="{% static 'home/images/tvshow/one piece.jpg' %}" alt="One Piece">
+             </a>
+        <figcaption>One Piece</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 21 %}">
+        <img src="{% static 'home/images/tvshow/Sacred Games.jpg' %}" alt="Sacred Games">
+            </a>
+        <figcaption>Sacred Games</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 22 %}">
+        <img src="{% static 'home/images/tvshow/squid game.jpg' %}" alt="Squid Game">
+        </a>
+        <figcaption>Squid Game</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 23 %}">
+        <img src="{% static 'home/images/tvshow/stranger things.jpg' %}" alt="Stranger Things">
+        </a>
+        <figcaption>Stranger Things</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 24 %}">
+        <img src="{% static 'home/images/tvshow/vikings.jpg' %}" alt="Vikings">
+            </a>
+        <figcaption>Vikings</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 25 %}">
+        <img src="{% static 'home/images/tvshow/peaky blienders.jpg' %}" alt="peaky blienders">
+        </a>
+        <figcaption>Peaky Blienders</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 26 %}">
+        <img src="{% static 'home/images/tvshow/the family man.jpg' %}" alt="Black Warrant">
+        </a>
+        <figcaption>The Family Man</figcaption>
+    </figure>
+        </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 27 %}">
+        <img src="{% static 'home/images/tvshow/scam 1992.jpg' %}" alt="Dark">
+            </a>
+        <figcaption>Scam 1992</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+         <figure>
+             <a href="{% url 'content_detail' 28 %}">
+        <img src="{% static 'home/images/tvshow/squid game 2.jpg' %}" alt="One Piece">
+             </a>
+        <figcaption>Squid Game 2</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 29 %}">
+        <img src="{% static 'home/images/tvshow/farzi.jpg' %}" alt="Sacred Games">
+            </a>
+        <figcaption>Farzi</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 30 %}">
+        <img src="{% static 'home/images/tvshow/game of thrones.jpg' %}" alt="Squid Game">
+        </a>
+        <figcaption>Game Of Thrones</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 31 %}">
+        <img src="{% static 'home/images/tvshow/breaking bad.jpg' %}" alt="Stranger Things">
+        </a>
+        <figcaption>Breaking Bad</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 32 %}">
+        <img src="{% static 'home/images/tvshow/wednesday.jpg' %}" alt="Vikings">
+            </a>
+        <figcaption>Wednesday</figcaption>
+    </figure>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<nav class="top-banner">
+   <a href="{% url 'home' %}" class="logo">
+    <img src="{% static 'home/images/final_ratemyshow_nobg.png' %}" alt="Logo" class="navbar-logo">
+  </a>
+  <ul>
+
+    <li class="{% if page == 'home' %}active{% endif %}"><a href="{% url 'home' %}"><strong>Home</strong></a></li>
+    <li class="{% if page == 'movies' %}active{% endif %}"><a href="{% url 'movies' %}"><strong>Movies</strong></a></li>
+    <li class="{% if page == 'tvshows' %}active{% endif %}"><a href="{% url 'tvshows' %}"><strong>TV Shows</strong></a></li>
+    <li class="{% if page == 'documentaries' %}active{% endif %}"><a href="{% url 'documentaries' %}"><strong>Documentaries</strong></a></li>
+
+  </ul>
+  {% if not request.user.is_authenticated %}
+    <button type="button" id="log_in">Login</button>
+  {% else %}
+    <form action="{% url 'logout' %}" method="post" style="position: absolute; right:24px; top:50%; transform: translateY(-50%); margin:0;">
+      {% csrf_token %}
+      <button type="submit" class="logout-button">Logout</button>
+    </form>
+  {% endif %}
+<!--  <button type="submit" id="log-out">Logout</button>-->
+</nav>

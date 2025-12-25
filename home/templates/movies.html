@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+
+</head>
+<body>
+{% include 'navbar.html' %}
+<h1 class="subhead">Movies</h1>
+<div class="row1">
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 1 %}">
+        <img src="{% static 'home/images/movie/Animal.jpg' %}" alt="Animal Poster">
+        </a>
+        <figcaption>Animal</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 2 %}">
+        <img src="{% static 'home/images/movie/extraction 2.jpg' %}" alt="extraction 2">
+        </a>
+        <figcaption>Extraction 2</figcaption>
+    </figure>
+        </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 3 %}">
+        <img src="{% static 'home/images/movie/devara.jpg' %}" alt="Devara">
+            </a>
+        <figcaption>Devara</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+         <figure>
+             <a href="{% url 'content_detail' 4 %}">
+        <img src="{% static 'home/images/movie/f8.jpg' %}" alt="F8">
+             </a>
+        <figcaption>F8</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+        <figure>
+        <a href="{% url 'content_detail' 5 %}">
+        <img src="{% static 'home/images/movie/Kalki 2898 AD.jpg' %}" alt="Kalki">
+        </a>
+        <figcaption>Kalki 2898AD</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 6 %}">
+        <img src="{% static 'home/images/movie/Mahavatar Narasimha.jpg' %}" alt="Narasimha">
+        </a>
+        <figcaption>Mahavatar Narasimha</figcaption>
+
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 7 %}">
+        <img src="{% static 'home/images/movie/guntur kaaram.jpg' %}" alt="guntur kaaram">
+        </a>
+        <figcaption>Guntur Kaaram</figcaption>
+
+    </figure>
+    </div>
+    <div class="column">
+        <figure>
+        <a href="{% url 'content_detail' 8 %}">
+        <img src="{% static 'home/images/movie/pushpa 2.jpg' %}" alt="pushpa 2">
+        </a>
+        <figcaption>Pushpa 2</figcaption>
+    </figure>
+    </div>
+</div>
+
+<div class="row1">
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 9 %}">
+        <img src="{% static 'home/images/movie/John Wick 4.jpg' %}" alt="johnwick 4">
+        </a>
+        <figcaption>John Wick 4</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 10 %}">
+        <img src="{% static 'home/images/movie/saaho.jpg' %}" alt="saaho">
+        </a>
+        <figcaption>Saaho</figcaption>
+    </figure>
+        </div>
+    <div class="column">
+        <figure>
+            <a href="{% url 'content_detail' 11 %}">
+        <img src="{% static 'home/images/movie/leo.jpg' %}" alt="leo">
+            </a>
+        <figcaption>Leo</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+         <figure>
+             <a href="{% url 'content_detail' 12 %}">
+        <img src="{% static 'home/images/movie/dune 2.jpg' %}" alt="dune 2">
+             </a>
+        <figcaption>Dune 2</figcaption>
+    </figure>
+    </div>
+</div>
+<div class="row1">
+    <div class="column">
+        <figure>
+        <a href="{% url 'content_detail' 13 %}">
+        <img src="{% static 'home/images/movie/salaar.jpg' %}" alt="Salaar">
+        </a>
+        <figcaption>Salaar</figcaption>
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 14 %}">
+        <img src="{% static 'home/images/movie/vikram.jpg' %}" alt="vikram">
+        </a>
+        <figcaption>vikram</figcaption>
+
+    </figure>
+    </div>
+    <div class="column">
+    <figure>
+        <a href="{% url 'content_detail' 15 %}">
+        <img src="{% static 'home/images/movie/kaithi.jpg' %}" alt="kaithi">
+        </a>
+        <figcaption>Kaithi</figcaption>
+
+    </figure>
+    </div>
+    <div class="column">
+        <figure>
+        <a href="{% url 'content_detail' 16 %}">
+        <img src="{% static 'home/images/movie/avatar 2.jpg' %}" alt="avatar">
+        </a>
+        <figcaption>Avatar 2</figcaption>
+    </figure>
+    </div>
+</div>
+</body>
+</html>
